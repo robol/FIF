@@ -17,9 +17,9 @@
 %  New Efficient Implementations Based on FFT'
 %  ArXiv http://arxiv.org/abs/1802.01359
 %
-dt=0.001;
+dt=0.000001;
 
-t=0:0.001:1;
+t=0:dt:1;
 
 x=(2*(t-0.5).^2+0.2).*sin(20*pi*t+0.2*cos(40*pi*t));
 
@@ -35,7 +35,9 @@ set(gca,'fontsize', 20);
 
 %%
 
+tic;
 [IMF0,logM] = FIF_v1(z);
+toc
 
 plot_imf_v8(IMF0)
 

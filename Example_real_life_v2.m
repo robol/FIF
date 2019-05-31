@@ -30,7 +30,7 @@ set(gca,'fontsize', 20);
 opts=Settings_IF_v1('IF.delta',10^-2,'IF.Xi',3);
 
 tic
-[IMF_1,logM] = FIF_v1(x,opts);
+[IMF_1,logM] = FIF_v3(x,opts);
 toc
 
 plot_imf_v8(IMF_1);
